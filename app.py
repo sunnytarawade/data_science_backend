@@ -11,6 +11,8 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['UPLOAD_FOLDER'] = constants.UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = constants.ALLOWED_EXTENSIONS
+app.secret_key = 'super secret key'
+app.config['SESSION_TYPE'] = 'filesystem'
 
 app.register_blueprint(views.app_blueprint)
 
