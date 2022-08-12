@@ -10,7 +10,7 @@ current_logger = logger.logger
 UPLOAD_FOLDER = constants.UPLOAD_FOLDER
 acquisition_blueprint = Blueprint('acquisition_blueprint',__name__,url_prefix='/acquisition')
 
-@acquisition_blueprint.route('/upload', methods=['POST'])
+@acquisition_blueprint.route('/upload/', methods=['POST'])
 def fileUpload():
     upload_id = str(uuid.uuid4())
     target=os.path.join(UPLOAD_FOLDER,upload_id)
