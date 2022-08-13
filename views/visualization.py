@@ -22,7 +22,7 @@ def get_duration_distribution_data(upload_id):
 
     return duration_ranges
 
-@visualization_blueprint.route('/popular_stations_map/<path:upload_id>/', methods=['GET'])
+@visualization_blueprint.route('/popular_stations/<path:upload_id>/', methods=['GET'])
 def get_popular_station_map_data(upload_id):
     rides_data_file_path = os.path.join(UPLOAD_FOLDER,upload_id,'rides_data_file_cleaned.csv')
     rides_data = pd.read_csv(rides_data_file_path)
