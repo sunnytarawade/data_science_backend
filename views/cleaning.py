@@ -185,7 +185,7 @@ def clean_data(upload_id):
     
     return {'message':'Successfully cleaned data'}
 
-@cleaning_blueprint.route('/data_cleaning_details/<path:upload_id>', methods=['GET', 'POST'])
+@cleaning_blueprint.route('/data_cleaning_details/<path:upload_id>/', methods=['GET', 'POST'])
 def get_data_cleaning_details(upload_id):
     
     target = os.path.join(UPLOAD_FOLDER,upload_id)
